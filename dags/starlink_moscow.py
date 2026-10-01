@@ -25,23 +25,22 @@ with DAG(
         proxy  = Variable.get('proxy')
         url    = 'https://api.n2yo.com/rest/v1/satellite/above/55.7558/37.6173/0/90/52'
         with Client(proxies={"http://": proxy, "https://": proxy}) as request:
-            result = request.get(
+            response = request.get(
                 url=url,
                 params={
                     'api_key': apikey,
-                }
+            }
             ).json()
-        return result['above']
+        return response['above']
 
     @task
-    def insert_sputnics(sputnics: list[dict]):
+    def insert_sputnics(sputnics):
         conn = connect(Variable.get('dburi'))
         with conn.cursor() as cursor:
             for sat in sputnics:
                 cursor.execute(insert_starlink_moscow, tuple(sat.values()))
         conn.commit()
-
+    init_db_task = init_db()
     sputnics = collect_sputnics()
-
-    init_db >> collect_sputnics
+    init_db_task >> sputnics.operator
     insert_sputnics(sputnics)
