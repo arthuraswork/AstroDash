@@ -5,3 +5,164 @@
 [2026-10-01T00:00:13.376+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:00:13.375+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2026-10-01T00:00:13.401+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:00:13.400+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
 [2026-10-01T00:00:13.418+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.109 seconds
+[2026-10-01T00:00:43.889+0000] {processor.py:153} INFO - Started process (PID=15025) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:00:43.890+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:00:43.892+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:00:43.891+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:00:43.938+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:00:44.003+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:00:44.003+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:00:44.044+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:00:44.044+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:00:44.070+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.187 seconds
+[2026-10-01T00:01:14.722+0000] {processor.py:153} INFO - Started process (PID=15104) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:14.723+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:01:14.724+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:14.723+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:14.754+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:14.811+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:14.811+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:01:14.860+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:14.860+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:01:14.883+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.168 seconds
+[2026-10-01T00:01:45.630+0000] {processor.py:153} INFO - Started process (PID=15183) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:45.632+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:01:45.633+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:45.633+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:45.679+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:01:45.733+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:45.733+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:01:45.766+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:01:45.766+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:01:45.788+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.163 seconds
+[2026-10-01T00:02:16.569+0000] {processor.py:153} INFO - Started process (PID=15282) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:16.571+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:02:16.573+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:16.572+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:16.602+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:16.648+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:16.647+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:02:16.678+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:16.678+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:02:16.699+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.135 seconds
+[2026-10-01T00:02:47.317+0000] {processor.py:153} INFO - Started process (PID=15361) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:47.319+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:02:47.319+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:47.319+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:47.357+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:02:47.424+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:47.423+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:02:47.471+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:02:47.471+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:02:47.499+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.188 seconds
+[2026-10-01T00:03:17.908+0000] {processor.py:153} INFO - Started process (PID=15440) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:17.909+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:03:17.910+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:17.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:17.939+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:17.987+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:17.986+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:03:18.034+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:18.034+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:03:18.066+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.161 seconds
+[2026-10-01T00:03:48.192+0000] {processor.py:153} INFO - Started process (PID=15519) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:48.193+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:03:48.194+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:48.194+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:48.236+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:03:48.284+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:48.284+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:03:48.316+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:03:48.316+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:03:48.337+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.152 seconds
+[2026-10-01T00:04:18.579+0000] {processor.py:153} INFO - Started process (PID=15607) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:18.581+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:04:18.582+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:18.582+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:18.613+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:18.664+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:18.664+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:04:18.695+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:18.695+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:04:18.720+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.148 seconds
+[2026-10-01T00:04:48.828+0000] {processor.py:153} INFO - Started process (PID=15697) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:48.829+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:04:48.830+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:48.830+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:48.859+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:04:48.907+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:48.907+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:04:48.937+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:04:48.937+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:04:48.960+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.137 seconds
+[2026-10-01T00:05:19.663+0000] {processor.py:153} INFO - Started process (PID=15776) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:19.665+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:05:19.667+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:19.666+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:19.714+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:19.796+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:19.796+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:05:19.833+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:19.833+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:05:19.853+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.196 seconds
+[2026-10-01T00:05:49.991+0000] {processor.py:153} INFO - Started process (PID=15855) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:49.992+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:05:49.993+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:49.993+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:50.040+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:05:50.096+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:50.096+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:05:50.128+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:05:50.128+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:05:50.150+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.165 seconds
+[2026-10-01T00:06:20.512+0000] {processor.py:153} INFO - Started process (PID=15954) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:20.514+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:06:20.515+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:20.515+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:20.557+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:20.603+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:20.603+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:06:20.638+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:20.638+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:06:20.661+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.156 seconds
+[2026-10-01T00:06:50.869+0000] {processor.py:153} INFO - Started process (PID=16033) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:50.871+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:06:50.872+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:50.871+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:50.915+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:06:50.966+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:50.966+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:06:50.999+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:06:50.999+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:06:51.019+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.156 seconds
+[2026-10-01T00:07:21.240+0000] {processor.py:153} INFO - Started process (PID=16112) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:21.241+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:07:21.243+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:21.243+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:21.277+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:21.330+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:21.330+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:07:21.374+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:21.373+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:07:21.400+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.165 seconds
+[2026-10-01T00:07:51.477+0000] {processor.py:153} INFO - Started process (PID=16191) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:51.478+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:07:51.479+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:51.479+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:51.526+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:07:51.586+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:51.586+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:07:51.621+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:07:51.621+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:07:51.647+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.174 seconds
+[2026-10-01T00:08:21.753+0000] {processor.py:153} INFO - Started process (PID=16290) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:21.755+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:08:21.756+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:21.756+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:21.786+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:21.833+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:21.832+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:08:21.862+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:21.862+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:08:21.881+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.134 seconds
+[2026-10-01T00:08:52.391+0000] {processor.py:153} INFO - Started process (PID=16369) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:52.392+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:08:52.393+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:52.393+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:52.423+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:08:52.477+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:52.476+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:08:52.522+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:08:52.522+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:08:52.549+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.163 seconds
+[2026-10-01T00:09:22.965+0000] {processor.py:153} INFO - Started process (PID=16448) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:22.968+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:09:22.968+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:22.968+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:22.998+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:23.051+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:23.051+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:09:23.090+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:23.090+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:09:23.111+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.150 seconds
+[2026-10-01T00:09:53.850+0000] {processor.py:153} INFO - Started process (PID=16527) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:53.851+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:09:53.852+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:53.851+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:53.883+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:09:53.934+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:53.934+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:09:53.969+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:09:53.969+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:09:53.991+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.145 seconds
+[2026-10-01T00:10:24.164+0000] {processor.py:153} INFO - Started process (PID=16626) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:24.167+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:10:24.168+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:24.168+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:24.209+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:24.263+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:24.263+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:10:24.306+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:24.306+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:10:24.330+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.172 seconds
+[2026-10-01T00:10:55.197+0000] {processor.py:153} INFO - Started process (PID=16705) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:55.198+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:10:55.200+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:55.200+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:55.249+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:10:55.313+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:55.313+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:10:55.352+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:10:55.352+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:10:55.373+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.182 seconds
+[2026-10-01T00:11:25.671+0000] {processor.py:153} INFO - Started process (PID=16784) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:25.674+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:11:25.675+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:25.675+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:25.710+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:25.760+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:25.760+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:11:25.813+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:25.813+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:11:25.837+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.173 seconds
+[2026-10-01T00:11:56.090+0000] {processor.py:153} INFO - Started process (PID=16863) to work on /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:56.091+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/near_earth_objects.py for tasks to queue
+[2026-10-01T00:11:56.092+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:56.092+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:56.140+0000] {processor.py:753} INFO - DAG(s) dict_keys(['near_earth_objects']) retrieved from /opt/airflow/dags/near_earth_objects.py
+[2026-10-01T00:11:56.190+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:56.190+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2026-10-01T00:11:56.220+0000] {logging_mixin.py:137} INFO - [2026-10-01T00:11:56.220+0000] {dag.py:3427} INFO - Setting next_dagrun for near_earth_objects to 2026-10-01T00:00:00+00:00, run_after=2026-10-02T00:00:00+00:00
+[2026-10-01T00:11:56.245+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/near_earth_objects.py took 0.161 seconds
