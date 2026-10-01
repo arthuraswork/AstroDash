@@ -35,3 +35,40 @@ UPDATE SET
     diameter_max_m        = EXCLUDED.diameter_max_m,
     updated_at            = now()
 """
+
+create_table_starlink_moscow =  """--sql
+CREATE TABLE IF NOT EXISTS starlink_moscow (
+    norad_id   BIGINT PRIMARY KEY,
+    name       VARCHAR(128) NOT NULL,
+    designator  VARCHAR(64) NOT NULL,
+    launch_date DATE NOT NULL,
+    lat DOUBLE PRECISION NOT NULL,
+    lon DOUBLE PRECISION NOT NULL,
+    alt DOUBLE PRECISION NOT NULL,
+    created_at TIMESTAMPTZ  NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ  NOT NULL DEFAULT now()
+);
+"""
+
+insert_starlink_moscow = """--sql
+INSERT INTO starlink_moscow 
+    (
+        norad_id, 
+        name,
+        designator,
+        launch_date, 
+        lat,
+        lon,
+        alt
+    ) VALUES (
+    %s, %s, %s, %s, %s, %s, %s
+    ) ON CONFLICT (norad_id) DO
+UPDATE SET 
+name = EXCLUDED.name,
+designator = EXCLUDED.designator
+launch_date = EXCLUDED.launch_date,
+lat = EXCLUDED.lat,
+lon = EXCLUDED.lon,
+alt = EXCLUDED.alt,
+updated_at = now()
+"""
