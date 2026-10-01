@@ -65,7 +65,7 @@ INSERT INTO starlink_moscow
     ) ON CONFLICT (norad_id) DO
 UPDATE SET 
 name = EXCLUDED.name,
-designator = EXCLUDED.designator
+designator = EXCLUDED.designator,
 launch_date = EXCLUDED.launch_date,
 lat = EXCLUDED.lat,
 lon = EXCLUDED.lon,

@@ -14,7 +14,7 @@ with DAG(
     
     @task
     def init_db():
-        conn = connect('postgresql://admin:0000@localhost:5432/nasadash')
+        conn = connect(Variable.get('dburi'))
         with conn.cursor() as cursor:
             cursor.execute(create_table_starlink_moscow)
         conn.commit()
@@ -28,7 +28,7 @@ with DAG(
             response = request.get(
                 url=url,
                 params={
-                    'api_key': apikey,
+                    'apiKey': apikey,
             }
             ).json()
         return response['above']

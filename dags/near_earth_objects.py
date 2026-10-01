@@ -42,17 +42,17 @@ with DAG(
         conn = psycopg2.connect(Variable.get('dburi'))
         with conn.cursor() as cursor:
             dates = struct['near_earth_objects']
-            for date in dates:
-                asteroids = struct['near_earth_objects'][date]
-                for asteroid in asteroids:
-                    absolute_magnitude = asteroid['absolute_magnitude_h']
-                    dist = asteroid['close_approach_data'][0]['miss_distance']['kilometers']
-                    relative_velocity = asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']
-                    diameter_max, diameter_min = asteroid['estimated_diameter']['meters'].values()
-                    nasa_id = asteroid['id']
-                    name = asteroid['name']
-                    obj = [nasa_id, name, absolute_magnitude, dist, relative_velocity, diameter_min, diameter_max]
-                    with conn.cursor() as cursor:
+            with conn.cursor() as cursor:
+                for date in dates:
+                    asteroids = struct['near_earth_objects'][date]
+                    for asteroid in asteroids:
+                        absolute_magnitude = asteroid['absolute_magnitude_h']
+                        dist = asteroid['close_approach_data'][0]['miss_distance']['kilometers']
+                        relative_velocity = asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']
+                        diameter_max, diameter_min = asteroid['estimated_diameter']['meters'].values()
+                        nasa_id = asteroid['id']
+                        name = asteroid['name']
+                        obj = [nasa_id, name, absolute_magnitude, dist, relative_velocity, diameter_min, diameter_max]
                         cursor.execute(insert_one_near_earth_objects, obj)
             conn.commit()
     init_table_task = init_table()
