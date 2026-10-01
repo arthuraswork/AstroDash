@@ -1,0 +1,1 @@
+from utils.sqls import create_table_near_earth_objects, insert_one_near_earth_objects

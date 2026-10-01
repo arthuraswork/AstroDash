@@ -1,0 +1,67 @@
+[2026-09-30T21:50:37.357+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [queued]>
+[2026-09-30T21:50:37.383+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [queued]>
+[2026-09-30T21:50:37.384+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2026-09-30T21:50:37.384+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2026-09-30T21:50:37.385+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2026-09-30T21:50:37.418+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): init_table> on 2026-04-30 00:00:00+00:00
+[2026-09-30T21:50:37.438+0000] {standard_task_runner.py:55} INFO - Started process 14951 to run task
+[2026-09-30T21:50:37.448+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'near_earth_objects', 'init_table', 'scheduled__2026-04-30T00:00:00+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/near_earth_objects.py', '--cfg-path', '/tmp/tmpucsh5yx5']
+[2026-09-30T21:50:37.449+0000] {standard_task_runner.py:83} INFO - Job 123: Subtask init_table
+[2026-09-30T21:50:37.598+0000] {task_command.py:389} INFO - Running <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [running]> on host 99d7515dcb98
+[2026-09-30T21:50:37.804+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=near_earth_objects
+AIRFLOW_CTX_TASK_ID=init_table
+AIRFLOW_CTX_EXECUTION_DATE=2026-04-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2026-04-30T00:00:00+00:00
+[2026-09-30T21:50:37.821+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/near_earth_objects.py", line 18, in init_table
+    conn = psycopg2.connect(Variable.get('dburi'))
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2026-09-30T21:50:37.840+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=near_earth_objects, task_id=init_table, execution_date=20260430T000000, start_date=20260930T215037, end_date=20260930T215037
+[2026-09-30T21:50:37.868+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 123 for task init_table (connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+; 14951)
+[2026-09-30T21:50:37.900+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2026-09-30T21:50:37.959+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-30T22:12:28.806+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [queued]>
+[2026-09-30T22:12:28.816+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [queued]>
+[2026-09-30T22:12:28.816+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2026-09-30T22:12:28.816+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2026-09-30T22:12:28.817+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2026-09-30T22:12:28.831+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): init_table> on 2026-04-30 00:00:00+00:00
+[2026-09-30T22:12:28.840+0000] {standard_task_runner.py:55} INFO - Started process 17766 to run task
+[2026-09-30T22:12:28.844+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'near_earth_objects', 'init_table', 'scheduled__2026-04-30T00:00:00+00:00', '--job-id', '520', '--raw', '--subdir', 'DAGS_FOLDER/near_earth_objects.py', '--cfg-path', '/tmp/tmprihenm_e']
+[2026-09-30T22:12:28.845+0000] {standard_task_runner.py:83} INFO - Job 520: Subtask init_table
+[2026-09-30T22:12:28.910+0000] {task_command.py:389} INFO - Running <TaskInstance: near_earth_objects.init_table scheduled__2026-04-30T00:00:00+00:00 [running]> on host 99d7515dcb98
+[2026-09-30T22:12:28.986+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=near_earth_objects
+AIRFLOW_CTX_TASK_ID=init_table
+AIRFLOW_CTX_EXECUTION_DATE=2026-04-30T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2026-04-30T00:00:00+00:00
+[2026-09-30T22:12:29.006+0000] {python.py:177} INFO - Done. Returned value was: None
+[2026-09-30T22:12:29.019+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=near_earth_objects, task_id=init_table, execution_date=20260430T000000, start_date=20260930T221228, end_date=20260930T221229
+[2026-09-30T22:12:29.055+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2026-09-30T22:12:29.100+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

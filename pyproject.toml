@@ -1,0 +1,14 @@
+[project]
+name = "nasadash"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Arthur", email = "arthuras.work@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "apache-airflow>=3.3.2",
+    "psycopg2-binary>=2.9.13",
+    "streamlit>=1.64.0",
+]
