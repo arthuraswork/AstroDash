@@ -1,115 +1,96 @@
-import streamlit as st
-import pandas as pd
-from dotenv import load_dotenv
 import os
-from psycopg2 import connect
-from database.near_objs_queries import (
-select_all_near_earth_objects, select_count_near_earth_objects,
-select_dist_near_earth_objects, select_speed_near_earth_objects,
 
-top_big_earth_objects, top_fast_earth_objects,
-top_near_earth_objects
+import pandas as pd
+import streamlit as st
+from dotenv import load_dotenv
+from psycopg2 import connect
+
+from database.near_objs_queries import (
+    select_all_near_earth_objects,
+    select_count_near_earth_objects,
+    select_dist_near_earth_objects,
+    select_speed_near_earth_objects,
+    top_big_earth_objects,
+    top_fast_earth_objects,
+    top_near_earth_objects,
 )
+
 load_dotenv()
 
-def count():
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute(select_count_near_earth_objects)
-            return cursor.fetchone()[0]
-    except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
+DB_ERROR_MSG = 'Ошибка, скорее всего проблемы с бд'
 
-def avg_dist():
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute(select_dist_near_earth_objects)
-            return round(cursor.fetchone()[0])
-    except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
+conn = connect(os.environ['DBURI'])
 
-def avg_speed():
+
+def scalar(sql_script, round_result=False):
     try:
         with conn.cursor() as cursor:
-            cursor.execute(select_speed_near_earth_objects)
-            return round(cursor.fetchone()[0])
+            cursor.execute(sql_script)
+            value = cursor.fetchone()[0]
+            return round(value) if round_result else value
     except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
+        conn.rollback()
+        st.warning(DB_ERROR_MSG)
+        return 0
+
 
 def all_objs():
+    columns = [
+        'nasa_id',
+        'name',
+        'absolute_magnitude',
+        'miss_distance_km',
+        'relative_velocity_kmh',
+        'diameter_min_m',
+        'diameter_max_m',
+    ]
     try:
         with conn.cursor() as cursor:
             cursor.execute(select_all_near_earth_objects)
-            return pd.DataFrame(cursor.fetchall(), columns=[
-                'nasa_id',
-                'name',
-                'absolute_magnitude',
-                'miss_distance_km',
-                'relative_velocity_kmh',
-                'diameter_min_m',
-                'diameter_max_m'
-            ])
+            return pd.DataFrame(cursor.fetchall(), columns=columns)
     except Exception as e:
-        st.warning('Ошибка, скорее всего проблемы с бд')
+        conn.rollback()
+        st.warning(DB_ERROR_MSG)
         st.write(e)
-def top_near():
+        return pd.DataFrame(columns=columns)
+
+
+def topk(sql_script, columns, x_column, y_column):
     try:
         with conn.cursor() as cursor:
-            cursor.execute(top_near_earth_objects)
-            return pd.DataFrame(cursor.fetchall(), columns=['Имя', 'Дистанция'])
+            cursor.execute(sql_script)
+            df = pd.DataFrame(cursor.fetchall(), columns=columns)
     except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
-
-def top_fast():
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute(top_fast_earth_objects)
-            return pd.DataFrame(cursor.fetchall(), columns=['Имя', 'Скорость'])
-    except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
-
-def top_big():
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute(top_big_earth_objects)
-            return pd.DataFrame(cursor.fetchall(), columns=['Имя', 'Размер'])
-    except Exception:
-        st.warning('Ошибка, скорее всего проблемы с бд')
-    return 0
+        conn.rollback()
+        st.warning(DB_ERROR_MSG)
+        df = pd.DataFrame(columns=columns)
+    return df, x_column, y_column
 
 
-conn = connect(os.environ['DBURI'])
+def draw_top(title, sql_script, columns, x_column, y_column, k):
+    st.write(title)
+    df, x, y = topk(sql_script, columns, x_column, y_column)
+    df = df.sort_values(y, ascending=False).iloc[:k]
+    st.bar_chart(data=df, x=x, y=y, horizontal=True, sort=False)
+
+
 st.title('Ближайшие к земле объекты')
 
-columns = st.columns(3)
+cols = st.columns(3)
 
-with columns[0]:
-    total = count()
+with cols[0]:
+    total = scalar(select_count_near_earth_objects)
     st.metric('Общее колличество', value=total, border=True)
-with columns[1]:
-    st.metric('Средняя скорость', value=avg_speed(), border=True)
-with columns[2]:
-    st.metric('Среднee расстояние от земли', value=avg_dist(), border=True)
+with cols[1]:
+    st.metric('Средняя скорость', value=scalar(select_speed_near_earth_objects, round_result=True), border=True)
+with cols[2]:
+    st.metric('Среднee расстояние от земли', value=scalar(select_dist_near_earth_objects, round_result=True), border=True)
 
-topk = st.slider('Показывать', min_value=0, max_value=total, value=5)
+k = st.slider('Показывать', min_value=0, max_value=max(total, 1), value=min(5, max(total, 1)))
 
-st.write('Топ ближайших')
-top_near_df = top_near().sort_values('Дистанция', ascending=False).iloc[:topk]
-st.bar_chart(data=top_near_df, x=top_near_df.columns[0], y=top_near_df.columns[1], horizontal=True, sort=False)
-
-st.write('Топ быстрых')
-top_fast_df = top_fast().sort_values('Скорость', ascending=False).iloc[:topk]
-st.bar_chart(data=top_fast_df, x=top_fast_df.columns[0], y=top_fast_df.columns[1], horizontal=True, sort=False)
-
-st.write('Топ больших')
-top_size_df = top_big().sort_values('Размер', ascending=False).iloc[:topk]
-st.bar_chart(data=top_size_df, x=top_size_df.columns[0], y=top_size_df.columns[1], horizontal=True, sort=False)
+draw_top('Топ ближайших', top_near_earth_objects, ['Имя', 'Дистанция'], 'Имя', 'Дистанция', k)
+draw_top('Топ быстрых', top_fast_earth_objects, ['Имя', 'Скорость'], 'Имя', 'Скорость', k)
+draw_top('Топ больших', top_big_earth_objects, ['Имя', 'Размер'], 'Имя', 'Размер', k)
 
 st.header('Все объекты')
-
 st.write(all_objs())
