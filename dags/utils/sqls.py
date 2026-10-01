@@ -27,11 +27,11 @@ INSERT INTO near_earth_objects (
     %s, %s, %s, %s, %s, %s, %s
 ) ON CONFLICT (nasa_id) DO
 UPDATE SET  
-    name = EXCLUDED.name
+    name                  = EXCLUDED.name,
     absolute_magnitude    = EXCLUDED.absolute_magnitude,
     miss_distance_km      = EXCLUDED.miss_distance_km,
     relative_velocity_kmh = EXCLUDED.relative_velocity_kmh,
     diameter_min_m        = EXCLUDED.diameter_min_m,
-    diameter_max_m        = EXCLUDED.diameter_max_m
+    diameter_max_m        = EXCLUDED.diameter_max_m,
     updated_at            = now()
 """
