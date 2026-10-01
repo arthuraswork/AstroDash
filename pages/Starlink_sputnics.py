@@ -43,13 +43,13 @@ def to_map(sql_script):
 
 
 
-st.title('Колличества:')
+st.title('Колличество:')
 cols = st.columns(2)
 with cols[0]:
     total = get_metric(select_current_count)
     st.metric('Сейчас', value=total, border=True)
 with cols[1]:
-    st.metric('Когда либо', value=get_metric(select_total_count), border=True)
+    st.metric('Всегда', value=get_metric(select_total_count), border=True)
 
 
 st.title('Высотность:')
